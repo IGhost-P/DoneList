@@ -9,12 +9,17 @@ function Loding() {
     const [inputText, setinputText] = useState('');
     const [nextId, setNextId] = useState(2);
     const onChange = e => setinputText(e.target.value);
+    const { id, text } = list
     const onClick = () => {
-        listState(
-            [{
-                ...list,
-                text: inputText
-            }])
+        const nextList = {
+            ...list,
+            [id]: nextId,
+            [text]: inputText
+        }
+        listState(nextList)
+        setinputText('')
+
+
     }
     const doneList = list.map(done => <li key={done.id}>{done.text}</li>)
 
