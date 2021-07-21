@@ -11,10 +11,10 @@ function Loding() {
     const onChange = e => setinputText(e.target.value);
     const onClick = () => {
         listState(
-            [
+            [{
                 ...list,
-                inputText
-            ])
+                text: inputText
+            }])
     }
     const doneList = list.map(done => <li key={done.id}>{done.text}</li>)
 
