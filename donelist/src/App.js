@@ -1,5 +1,6 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
+import Loding from './component/Loding';
 import TodoHead from './component/TodoHead';
 import TodoTemplate from './component/TodoTemplate';
 
@@ -14,7 +15,8 @@ function App() {
     <>
       <GlobalStyle />
       <TodoTemplate>
-        <TodoHead />
+        {/* <TodoHead /> */}
+        <Loding />
       </TodoTemplate>
     </>
   );
