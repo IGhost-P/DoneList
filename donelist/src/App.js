@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import Loding from './component/Loding';
 import TodoHead from './component/TodoHead';
 import TodoTemplate from './component/TodoTemplate';
+import DoneList from './component/DoneList'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -15,8 +16,8 @@ function App() {
     <>
       <GlobalStyle />
       <TodoTemplate>
-        {/* <TodoHead /> */}
-        <Loding />
+        <TodoHead />
+        <DoneList />
       </TodoTemplate>
     </>
   );
