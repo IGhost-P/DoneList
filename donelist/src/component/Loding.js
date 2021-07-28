@@ -12,6 +12,8 @@ const reducuer = (state, action) => {
             return {
 
             }
+        default:
+            return state;
     }
 }
 
@@ -23,9 +25,7 @@ function Loding() {
         nickName: ''
     });
     const { name, nickName } = state
-    const onClick = e => {
-        dispatch(e.target);
-    }
+
 
     return (
         <div>
@@ -33,12 +33,12 @@ function Loding() {
                 <input
                     name="name"
                     value={name}
-                    onChange={onClick}
+                    onChange={() => dispatch({ type: "ONCHANGE" })}
                 />
                 <input
                     name="nickName"
                     value={nickName}
-                    onChange={onClick}
+                    onChange={() => dispatch({ type: "ONCHANGE" })}
                 />
             </div>
             <div>
