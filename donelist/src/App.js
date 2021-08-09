@@ -4,13 +4,15 @@ import Loding from './component/Loding';
 import TodoHead from './component/TodoHead';
 import TodoInsert from './component/TodoInsert';
 import TodoTemplate from './component/TodoTemplate';
+import TodoList from './component/TodoList';
 
 
 function App() {
   return (
     <>
-      <TodoTemplate>TodoTemplate
+      <TodoTemplate>
         <TodoInsert />
+        <TodoList />
       </TodoTemplate>
     </>
   );

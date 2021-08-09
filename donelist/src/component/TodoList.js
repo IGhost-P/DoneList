@@ -1,18 +1,16 @@
-import React from ‘react‘;
-import TodoListItem from ‘./TodoListItem‘;
-import ‘./TodoList.scss‘;
+import React from 'react'
+import TodoListItem from './TodoListItem'
+import './TodoList.scss'
 
-
-const TodoList = () => {
+function TodoList() {
     return (
-        <div className=“ TodoList“>
+        <div className="TodoList">
             <TodoListItem />
             <TodoListItem />
             <TodoListItem />
+
         </div>
-    );
-};
+    )
+}
 
-
-
-export default TodoList;
+export default TodoList
