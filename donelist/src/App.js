@@ -46,11 +46,22 @@ function App() {
     },
     [todos],
   )
+
+  const onToggle = useCallback(
+    id => {
+      setTodos(
+        todos.map(todo =>
+          todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+        ),
+      );
+    },
+    [todos],
+  )
   return (
     <>
       <TodoTemplate>
         <TodoInsert onInsert={onInsert} />
-        <TodoList todos={todos} onRemove={onRemove} /> {/* todos에 위에 만든 리스트를 넣어주자 */}
+        <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} /> {/* todos에 위에 만든 리스트를 넣어주자 */}
       </TodoTemplate>
     </>
   );
