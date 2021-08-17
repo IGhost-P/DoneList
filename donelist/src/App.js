@@ -39,11 +39,18 @@ function App() {
     },
     [todos],
   )
+
+  const onRemove = useCallback(
+    id => {
+      setTodos(todos.filter(todo => todo.id !== id));
+    },
+    [todos],
+  )
   return (
     <>
       <TodoTemplate>
         <TodoInsert onInsert={onInsert} />
-        <TodoList todos={todos} /> {/* todos에 위에 만든 리스트를 넣어주자 */}
+        <TodoList todos={todos} onRemove={onRemove} /> {/* todos에 위에 만든 리스트를 넣어주자 */}
       </TodoTemplate>
     </>
   );
