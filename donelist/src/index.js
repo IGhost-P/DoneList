@@ -8,9 +8,8 @@ import Log from './Log';
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <Log /> <DoneList />
-
-
+      <Log />
+      <DoneList />
     </div>
   </React.StrictMode>,
   document.getElementById('root')

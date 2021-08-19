@@ -3,9 +3,13 @@ import './LogTemplate.scss'
 
 function LogTemplate() {
     return (
-        <div>
-            <div className="log" >커밋 로그가 올라갈 에정</div>
+        <div className="log" >
+            <div className="logTitle"> 달력 이름이 나올것
+
+            </div>
+            <div className="logcontent"> 달력이 들어갈 예정</div>
         </div>
+
     )
 }
 

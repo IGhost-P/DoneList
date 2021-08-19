@@ -1,9 +1,25 @@
 .log{
     float: left;
     width: 512px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6rem;
+    margin-left: 80px;
     border-radius: 4px;
     overflow: hidden;
+    
+    .logTitle{
+        background: #22b8cf;
+        color:white;
+        height: 4rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logcontent{
+        background: white;
+        min-height: 320px;
+        max-height: 513px;
+        overflow-y: auto;
+    }
 }
+   
