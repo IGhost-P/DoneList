@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import DoneList from './DoneList'
 import reportWebVitals from './reportWebVitals';
+import Log from './Log';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <Log /> <DoneList />
+
+
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
