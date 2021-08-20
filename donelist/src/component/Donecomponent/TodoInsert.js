@@ -11,9 +11,13 @@ const TodoInsert = ({ onInsert }) => {
 
     const onSubmit = useCallback(
         e => {
-            onInsert(value);
-            setValue("");
-            e.preventDefault();
+            // 입력값 없을때 처리한다.
+            if (value === "") { alert("입력해주세요"); e.preventDefault(); }
+            else {
+                onInsert(value);
+                setValue("");
+                e.preventDefault();
+            }
         },
         [onInsert, value]
     )

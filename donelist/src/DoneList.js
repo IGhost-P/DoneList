@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import TodoInsert from './component/Donecomponent/TodoInsert';
 import TodoTemplate from './component/Donecomponent/TodoTemplate';
 import TodoList from './component/Donecomponent/TodoList';
+import Done from './component/Donecomponent/Done';
 
 
 function DoneList() {
@@ -55,6 +56,18 @@ function DoneList() {
         },
         [todos],
     )
+
+    const onDone = useCallback(
+        () => {
+            const Data = [...todos];
+            setTodos(todos.filter(todo => todo.text === true))
+
+            // 해당 데이터를 JSON 형식으로 파이어베이스에 보내서, 캘린더에서 사용할수 있게 만들어보자
+            console.log(Data)
+        },
+        [todos],
+    )
+
     return (
         <>
 
@@ -62,6 +75,7 @@ function DoneList() {
             <TodoTemplate>
                 <TodoInsert onInsert={onInsert} />
                 <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} /> {/* todos에 위에 만든 리스트를 넣어주자 */}
+                <Done onDone={onDone} />
             </TodoTemplate>
 
         </>
